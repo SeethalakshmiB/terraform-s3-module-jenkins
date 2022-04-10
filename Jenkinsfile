@@ -4,7 +4,7 @@ pipeline {
     stages {
       stage('fetch_latest_code_from_github') {
         steps {
-          git 'https://github.com/SeethalakshmiB/terraform-s3-module-jenkins.git'
+          git credentialsId: 'github', url: 'https://github.com/SeethalakshmiB/terraform-s3-module-jenkins.git'
         }
       }
 
